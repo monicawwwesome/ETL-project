@@ -1,0 +1,19 @@
+Sub cleanup()
+For i = 2 To 2190
+    If Cells(i, 2).Value <> 2000 And Cells(i, 2).Value <> 2010 And Cells(i, 2).Value <> 2015 And Cells(i, 2).Value <> 2019 Then
+        Rows(i).EntireRow.Delete
+    End If
+    
+Next i
+End Sub
+
+Sub cleanup()
+For i = 2 To 2197
+    If Cells(i, 4).Value = "Female" Then
+        Rows(i).EntireRow.Delete
+    ElseIf Cells(i, 4).Value = "Male" Then
+        Rows(i).EntireRow.Delete
+    End If
+
+Next i
+End Sub
